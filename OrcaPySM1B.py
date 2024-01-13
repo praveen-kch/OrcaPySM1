@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """ ***************************************************************************
 
-Python Script Name : OrcaPySM1B
+Python Script Name : OrcaPySM1A
 
 Description : 
     
@@ -13,7 +13,9 @@ Description :
     
         Input.xlsx
         OrcaPySM1A.py
+        OrcaPySM1A_POST.py
         OrcaPySM1B.py
+        OrcaPySM1B_POST.py
     
     Note: The Wave Loads on the vessel are required to be imported seperately 
     from an OrcaWave Result File or any other valid / compatible seakeeping 
@@ -32,7 +34,7 @@ Description :
 
     Step 2:
     -------
-        Run the Python Script : OrcaPySM1.py
+        Run the Python Script : OrcaPySM1A.py
     If all input data is sufficient and valid, then this script generates 
     a Folder named INTACT in the same parent directory.
     This INTACT folder shall have the following  
@@ -49,9 +51,13 @@ Description :
     static analysis and save the simulation file with the same name in the same
     INTACT directory.
     
+        Run the Python Script : OrcaPySM1A_POST.py
+        
+        This will generate an Ouput Excel Sheet with Static Analysis Results.
+    
     Step 4: 
     -------
-        Run the Python Script : OrcaPySM2.py
+        Run the Python Script : OrcaPySM1B.py
     This Script file will be in the parent directory. This cript reads the 
     Input Excel Sheet and the Intact Static Simulation File. Based on the Cases
     listed in the Input Excel Sheet this script generates one Simulation File  
@@ -62,6 +68,12 @@ Description :
     
     These Generated Files can be Batch Processed and the final simulation 
     results can be further post processed.
+    
+    After Runing all the Intact dynamic simulations:
+        
+        Run the Python Script : OrcaPySM1B_POST.py
+        
+        This will generate an Ouput Excel Sheet with Dynamic Analysis Results.   
     
 @author: Praveen Kumar Ch (praveench1888@gmail.com)
 
